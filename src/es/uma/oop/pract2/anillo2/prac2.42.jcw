@@ -1,0 +1,11 @@
+! ** JCreator Workspace File (C)2000
+! ********** DO NOT EDIT *********
+
+VERSION := "1.00"
+LABEL := "prac2.4"
+
+! Start Project Structure
+#[BeginProject]SOURCE := "prac2.4.jcp" #[EndProject]
+
+! Start Last Document Structure
+
