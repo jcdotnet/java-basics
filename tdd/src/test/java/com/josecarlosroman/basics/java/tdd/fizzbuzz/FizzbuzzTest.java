@@ -1,6 +1,8 @@
 package com.josecarlosroman.basics.java.tdd.fizzbuzz;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -70,6 +72,15 @@ import static org.junit.jupiter.api.Assertions.fail;
     void testGetNumbersMustReturn100Numbers() {
         int expected = 100;
         assertEquals(expected, Fizzbuzz.getNumbers(), "Should be 100");
+    }
+
+    @ParameterizedTest(name="value={0}, expected={1}")
+    @CsvFileSource(resources = "/test-data.csv")
+    @DisplayName("Test data file")
+    @Order(9)
+    void testDataFile(int value, String expected) {
+        // JUnit will run the test multiple times and supply the data for the parameters
+       assertEquals(expected, Fizzbuzz.compute(value));
     }
 
 }
