@@ -14,14 +14,14 @@ import static org.junit.jupiter.api.Assertions.fail;
     void testFirstNumberIsOne() {
         String expected = "1";
         assertEquals(expected, Fizzbuzz.compute(1), "First number should be one");
-
     }
 
     @Test
     @DisplayName("Third number is Fizz")
     @Order(2)
     void testThirdNumberIsFizz() {
-        fail("fail");
+        String expected = "Fizz";
+        assertEquals(expected, Fizzbuzz.compute(3), "Third number should be one");
     }
 
     @Test
