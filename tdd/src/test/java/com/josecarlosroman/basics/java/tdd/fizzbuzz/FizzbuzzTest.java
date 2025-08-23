@@ -44,7 +44,8 @@ import static org.junit.jupiter.api.Assertions.fail;
     @DisplayName("Fizz")
     @Order(5)
     void testForFizz() {
-        fail("fail");
+        String expected = "Fizz";
+        assertEquals(expected, Fizzbuzz.compute(36), "Should be Fizz");
     }
 
     @Test
