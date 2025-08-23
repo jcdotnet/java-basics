@@ -52,21 +52,24 @@ import static org.junit.jupiter.api.Assertions.fail;
     @DisplayName("Buzz")
     @Order(6)
     void testForBuzz() {
-        fail("fail");
+        String expected = "Buzz";
+        assertEquals(expected, Fizzbuzz.compute(35), "Should be Buzz");
     }
 
     @Test
     @DisplayName("Fizzbuzz")
     @Order(7)
     void testForFizzbuzz() {
-        fail("fail");
+        String expected = "Fizzbuzz";
+        assertEquals(expected, Fizzbuzz.compute(30), "Should be Fizzbuzz");
     }
 
     @Test
     @DisplayName("getNumbers must return 100 numbers")
     @Order(8)
     void testGetNumbersMustReturn100Numbers() {
-        fail("fail");
+        int expected = 100;
+        assertEquals(expected, Fizzbuzz.getNumbers(), "Should be 100");
     }
 
 }
