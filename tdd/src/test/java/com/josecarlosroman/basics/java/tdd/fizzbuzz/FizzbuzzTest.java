@@ -36,7 +36,8 @@ import static org.junit.jupiter.api.Assertions.fail;
     @DisplayName("Fifteen number is Fizzbuzz")
     @Order(4)
     void testFifteenNumberIsFizzbuzz() {
-        fail("fail");
+        String expected = "Fizzbuzz";
+        assertEquals(expected, Fizzbuzz.compute(15), "Fifteen number should be Fizzbuzz");
     }
 
     @Test
