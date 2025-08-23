@@ -24,4 +24,10 @@ public class Fizzbuzz {
 
         return StringUtils.capitalize(result.toString()); // result must be Fizzbuzz, not FizzBuzz
     }
+
+    public static void main(String[] args) {
+        for (int i=1; i <= getNumbers(); i++) {
+            System.out.println(compute(i));
+        }
+    }
 }
