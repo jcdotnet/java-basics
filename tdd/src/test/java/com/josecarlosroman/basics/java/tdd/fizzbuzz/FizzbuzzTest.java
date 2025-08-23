@@ -21,14 +21,15 @@ import static org.junit.jupiter.api.Assertions.fail;
     @Order(2)
     void testThirdNumberIsFizz() {
         String expected = "Fizz";
-        assertEquals(expected, Fizzbuzz.compute(3), "Third number should be one");
+        assertEquals(expected, Fizzbuzz.compute(3), "Third number should be Fizz");
     }
 
     @Test
     @DisplayName("Fifth number is Buzz")
     @Order(3)
     void testFifthNumberIsBuzz() {
-        fail("fail");
+        String expected = "Buzz";
+        assertEquals(expected, Fizzbuzz.compute(5), "Fifth number should be Buzz");
     }
 
     @Test
