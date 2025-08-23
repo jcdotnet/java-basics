@@ -2,6 +2,7 @@ package com.josecarlosroman.basics.java.tdd.fizzbuzz;
 
 import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -11,7 +12,9 @@ import static org.junit.jupiter.api.Assertions.fail;
     @DisplayName("First number is one")
     @Order(1)
     void testFirstNumberIsOne() {
-        fail("fail");
+        String expected = "1";
+        assertEquals(expected, Fizzbuzz.compute(1), "First number should be one");
+
     }
 
     @Test
